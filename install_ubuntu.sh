@@ -14,3 +14,7 @@ export PATH=~/.local/bin:$PATH
 if type wget 2> /dev/null; then
     wget --no-check-certificate http://install.ohmyz.sh -O - | sh
 fi
+
+if [ ! -f ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] ; then
+    git clone git://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+fi
