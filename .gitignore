@@ -1,0 +1,4 @@
+.zsh_private
+.bash_private
+*.swp
+
