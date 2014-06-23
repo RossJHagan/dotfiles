@@ -11,7 +11,7 @@ noinstall=1
 
 function usage () {
     cat <<EOF
-Usage: $0 [-d source dotfiles dir] [-f dotfile list to apply ] [-o backup dir ]
+Usage: $0 [-d source dotfiles dir] [-f dotfile list to apply ] [-o backup dir ] [-i]
     -d  set a custom source directory for the dotfiles [~/dotfiles]
     -f  a list of the dotfiles to include in setup, overriding defaults
         Default: $files
@@ -72,7 +72,7 @@ git config --global core.editor vim
 
 #initialise Vundle folder
 if [ ! -d ~/.vim/bundle/Vundle.vim ] ; then
-    if ! type "git" 2> /dev/null ; then
+    if ! type git 2> /dev/null ; then
         echo "Git is not installed for cloning Vundle."
         exit 0
     fi
@@ -80,7 +80,6 @@ if [ ! -d ~/.vim/bundle/Vundle.vim ] ; then
 fi
 
 if [ ! -d "$olddir" ] ; then
-    echo "Making $olddir"
     mkdir -p $olddir
 fi
 
