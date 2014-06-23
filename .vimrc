@@ -11,6 +11,12 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 
+" Language Based Plugins
+"
+" GoLang:
+" Plugin 'fatih/vim-go'
+
+
 call vundle#end()
 filetype plugin indent on
 
@@ -44,8 +50,10 @@ set laststatus=2
 set hlsearch
 set incsearch
 
+" Map jj to replace <esc>
 imap jj <esc>
 
+" Jump around window splits a bit more naturally
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-l> <C-w>l
