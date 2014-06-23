@@ -11,7 +11,9 @@ ZSH_THEME="agnoster"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source $HOME/dotfiles/.common_aliases
+if [ -f $HOME/dotfiles/.common_aliases ] ; then
+    source $HOME/dotfiles/.common_aliases
+fi
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -77,7 +79,9 @@ export PATH=~/.local/bin:$PATH
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # POWERLINE - if installed, link to the bindings
-. ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+if [ -f ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ] ; then
+    . ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
 
 if [ -f $HOME/dotfiles/.zsh_private ] ; then
     source $HOME/dotfiles/.zsh_private

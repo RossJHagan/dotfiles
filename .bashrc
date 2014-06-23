@@ -120,3 +120,7 @@ fi
 if [ -f $HOME/dotfiles/.common_aliases ] ; then
     source $HOME/dotfiles/.common_aliases
 fi
+
+if [ -f ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh ] ; then
+    . ~/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+fi

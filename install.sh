@@ -11,13 +11,13 @@ noinstall=1
 
 function usage () {
     cat <<EOF
-Usage: $0 [-d source dotfiles dir] [-f dotfile list to apply ] [-o backup to old]
+Usage: $0 [-d source dotfiles dir] [-f dotfile list to apply ] [-o backup dir ]
     -d  set a custom source directory for the dotfiles [~/dotfiles]
     -f  a list of the dotfiles to include in setup, overriding defaults
         Default: $files
     -o  where to put existing dotfiles for backup [~/dotfiles_old]
-    -s  specify the system - currently accepts ubuntu
-    -i  install all expected programs
+    -s  specify the system to install for [ubuntu]
+    -i  install all expected programs using the install_$system.sh script
 }
 EOF
     exit 0
@@ -50,7 +50,7 @@ shift $(($OPTIND - 1))
 
 if [ $noinstall -eq 0 -a -f "$dir/install_$sys.sh" ] ; then
     echo "Running installer"
-    . $dir/install_ubuntu.sh
+    . $dir/install_$sys.sh
 fi
 
 # Expected Commands
