@@ -72,7 +72,7 @@ git config --global core.editor vim
 
 #initialise Vundle folder
 if [ ! -d ~/.vim/bundle/Vundle.vim ] ; then
-    if [ ! type "git" > /dev/null ] ; then
+    if ! type "git" 2> /dev/null ; then
         echo "Git is not installed for cloning Vundle."
         exit 0
     fi

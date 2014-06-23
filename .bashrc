@@ -117,6 +117,8 @@ if [ -f $HOME/dotfiles/.bash_private ] ; then
     source $HOME/dotfiles/.bash_private
 fi
 
+export PATH=~/.local/bin:$PATH
+
 if [ -f $HOME/dotfiles/.common_aliases ] ; then
     source $HOME/dotfiles/.common_aliases
 fi
