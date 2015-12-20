@@ -39,3 +39,19 @@ then pass the osname in under the `-s` flag, to include that instead.
     [bash] ./install.sh -s gentoo
 
 will look for the `install_gentoo.sh` script.
+
+
+Set ZSH
+-------
+
+`chsh -s /bin/zsh`
+
+Also
+----
+
+Remember to change the font in your terminal.  In a desktop environment, there will usually
+be a configuration option for setting your terminal fonts.
+These must have been patched with the Powerline Symbols.
+
+`git clone https://github.com/powerline/fonts.git`
+`cd fonts && ./install.sh`
