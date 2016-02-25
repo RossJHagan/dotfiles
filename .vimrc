@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-fugitive'
